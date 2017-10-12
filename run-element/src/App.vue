@@ -1,9 +1,8 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div id="app">  
     <router-view/>
-     <ElAlert title="这是一个alert" show-icon description="this is description">1</ElAlert>
-      <el-button type="primary" icon="edit" :disabled="true" @click="clickbtn">按钮</el-button>
+<!--      <ElAlert title="这是一个alert" show-icon description="this is description">1</ElAlert>
+      <el-button type="primary" icon="edit" :disabled="true" @click="clickbtn">按钮</el-button> -->
   </div>
 
 </template>
@@ -24,7 +23,7 @@ export default {
 
 <style>
 /*import 'element-ui.css';*/
-@import '../node_modules/element-ui/lib/theme-default/index.css';
+@import './element-ui/lib/theme-default/index.css';
 /*@import '../../node_modules/swiper/dist/css/swiper.min.css';*/
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
