@@ -1,0 +1,18 @@
+{
+  "lerna": "2.4.0",
+  "version": "independent",
+  "publishConfig": {
+    "ignore": [
+      "node_modules",
+      "log.*"
+    ]
+  },
+  "packages": [
+    "packages/carousel",
+    "packages/table",
+    "packages/upload",
+    "packages/date-picker",
+    "packages/loading",
+    "packages/pagination"
+  ]
+}

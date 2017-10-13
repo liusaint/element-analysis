@@ -7,11 +7,12 @@ import router from './router'
 Vue.config.productionTip = false
 
 /*element上传插件*/
-import elementUI from 'element-ui'
+import elementUI from './element-ui'
 // import 'element-theme-default/dist/upload.css'
 
 Vue.use(elementUI)
-
+import test1 from 'test1';
+console.log(test1);
 
 /* eslint-disable no-new */
 new Vue({
