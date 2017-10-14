@@ -42,7 +42,10 @@ npm install
 
 npm run dev
 
-然后访问http://localhost:8085可以看到示例。跟官网http://element.eleme.io/#/zh-CN基本是一样的。我们也可以直接到这个示例中去修改组件，查看效果。毕竟实时编译。
+然后访问http://localhost:8085
+可以看到示例。
+跟官网http://element.eleme.io/#/zh-CN
+基本是一样的。我们也可以直接到这个示例中去修改组件，查看效果。毕竟实时编译。
 
 然后是编译，也就是生成我们项目中会使用到的文件。
 
