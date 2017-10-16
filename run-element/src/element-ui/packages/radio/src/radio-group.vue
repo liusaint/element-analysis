@@ -1,4 +1,5 @@
 <template>
+  <!-- 自定义input类型 v-model-->
   <div class="el-radio-group">
     <slot></slot>
   </div>
@@ -22,7 +23,6 @@
     },
     watch: {
       value(value) {
-        debugger;
         // 组件本身的change事件
         this.$emit('change', value);
         // 父组件的change事件。不冒泡？

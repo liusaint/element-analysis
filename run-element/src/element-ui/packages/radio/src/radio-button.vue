@@ -33,12 +33,11 @@
     computed: {
       value: {
         get() {
-          // 父级的value
+          // 父级的value。父级获取到值之后再分发给子组件。
           return this._radioGroup.value;
         },
         set(value) {
-          console.log(value);
-          // 触发父级的input事件。
+          // 触发父级的input事件。把value值传给父级。
           this._radioGroup.$emit('input', value);
         }
       },
