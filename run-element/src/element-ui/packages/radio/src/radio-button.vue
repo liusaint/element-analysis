@@ -16,6 +16,7 @@
       :disabled="isDisabled">
     <span class="el-radio-button__inner" :style="value === label ? activeStyle : null">
       <slot></slot>
+      <!-- 直接使用:label或组件中的值主在这里 -->
       <template v-if="!$slots.default">{{label}}</template>
     </span>
   </label>
@@ -32,12 +33,16 @@
     computed: {
       value: {
         get() {
+          // 父级的value
           return this._radioGroup.value;
         },
         set(value) {
+          console.log(value);
+          // 触发父级的input事件。
           this._radioGroup.$emit('input', value);
         }
       },
+      // 往上级找，一直到上级的组件名为ElRadioGroup;
       _radioGroup() {
         let parent = this.$parent;
         while (parent) {
@@ -49,17 +54,20 @@
         }
         return false;
       },
+      // 从上层组件拿到对应的样式什么的。
       activeStyle() {
         return {
           backgroundColor: this._radioGroup.fill || '',
           borderColor: this._radioGroup.fill || '',
-          boxShadow: this._radioGroup.fill ? `-1px 0 0 0 ${this._radioGroup.fill}` : '',
+          boxShadow: this._radioGroup.fill ? `-1px 0 0 0 ${this._radioGroup.fill}` : '', // 注意es6模板语法
           color: this._radioGroup.textColor || ''
         };
       },
+      // 父组件的size
       size() {
         return this._radioGroup.size;
       },
+      // 如果本身是true,听本身的，如果父级是true,听父级的。
       isDisabled() {
         return this.disabled || this._radioGroup.disabled;
       }

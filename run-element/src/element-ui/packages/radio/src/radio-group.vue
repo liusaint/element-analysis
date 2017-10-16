@@ -11,7 +11,7 @@
 
     componentName: 'ElRadioGroup',
 
-    mixins: [Emitter],
+    mixins: [Emitter], // 注意这里的mixins的用法
 
     props: {
       value: {},
@@ -22,7 +22,10 @@
     },
     watch: {
       value(value) {
+        debugger;
+        // 组件本身的change事件
         this.$emit('change', value);
+        // 父组件的change事件。不冒泡？
         this.dispatch('ElFormItem', 'el.form.change', [this.value]);
       }
     }
