@@ -48,7 +48,7 @@
     },
 
     computed: {
-      //判断是不是被group围起来的。
+      // 判断是不是被group围起来的。
       isGroup() {
         let parent = this.$parent;
         while (parent) {
@@ -70,8 +70,10 @@
         set(val) {
           if (this.isGroup) {
             this.dispatch('ElRadioGroup', 'input', [val]);
+            // 是不是下面这种写法也可以
+            // this._radioGroup.$emit('input', val);
           } else {
-            //这句再看看。
+            // 这句再看看。
             this.$emit('input', val);
           }
         }
