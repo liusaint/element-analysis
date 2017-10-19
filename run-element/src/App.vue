@@ -6,6 +6,9 @@
 
       <label><input type="radio" name="" id="" value="1" v-model="a">测试label</label>
       <label><input type="radio" name="" id="" value="2" v-model="a">2222222222</label>
+
+
+      <input type="text" v-model="value">
   </div>
 
 </template>
@@ -41,6 +44,14 @@ export default {
 
         }
       },
+      value:{
+        get(){
+          return this.value;
+        },
+        set(val){
+          this.$emit('input', val);
+        }
+      }
     },
 }
 </script>
