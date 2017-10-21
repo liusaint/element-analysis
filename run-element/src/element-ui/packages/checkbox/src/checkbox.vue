@@ -59,12 +59,17 @@
     computed: {
       model: {
         get() {
-          return this.isGroup
-            ? this.store : this.value !== undefined
-            ? this.value : this.selfModel;
+          // 如果是group中，拿store。
+          // 如果单独，拿value或selfModel。
+          debugger;
+          // return this.isGroup
+          //   ? this.store : this.value !== undefined
+          //   ? this.value : this.selfModel;
         },
 
         set(val) {
+          //可能是一个数组什么的。v-model绑定的是什么，这个值就是set后的值?
+          debugger;
           if (this.isGroup) {
             let isLimitExceeded = false;
             (this._checkboxGroup.min !== undefined &&
@@ -79,7 +84,7 @@
             this.dispatch('ElCheckboxGroup', 'input', [val]);
           } else {
             this.$emit('input', val);
-            this.selfModel = val;
+            // this.selfModel = val;
           }
         }
       },

@@ -1,14 +1,26 @@
 <template>
-  <div id="app">  
+  <div id="app">
     <router-view/>
-     <ElAlert title="这是一个alert" show-icon description="this is description">1</ElAlert>
-      <el-button type="primary" icon="edit" :disabled="true" @click="clickbtn">按钮</el-button>
+    <ElAlert title="这是一个alert" show-icon description="this is description">1</ElAlert>
+    <el-button type="primary" icon="edit" :disabled="true" @click="clickbtn">按钮</el-button>
 
-      <label><input type="radio" name="" id="" value="1" v-model="a">测试label</label>
-      <label><input type="radio" name="" id="" value="2" v-model="a">2222222222</label>
+    <label>
+      <input type="radio" name="" id="" value="1" v-model="a">测试label</label>
+    <label>
+      <input type="radio" name="" id="" value="2" v-model="a">2222222222</label>
+
+    <!-- <el-checkbox-group v-model="checkList"> -->
+      <!-- <el-checkbox v-model="a" label="aaa" true-label="trueA" false-label="falseA"></el-checkbox> -->
+      <!-- <el-checkbox true-label="trueB" false-lable="falseB"></el-checkbox> -->
+      <!-- <el-checkbox true-label="trueC" false-lable="falseC"></el-checkbox> -->
+      <!-- <el-checkbox true-label="true禁用" false-lable="false禁用" disabled></el-checkbox> -->
+      <!-- <el-checkbox label="选中且禁用" true-label="true选中且禁用" false-lable="false选中且禁用"  disabled></el-checkbox> -->
+    <!-- </el-checkbox-group> -->
 
 
-      <input type="text" v-model="value">
+    <label><input type="checkbox" value="1" v-model="testcheckbox">11111111</label>
+    <label><input type="checkbox" value="2" v-model="testcheckbox">1111</label>
+    <label><input type="checkbox" value="3" v-model="testcheckbox">1111111111</label>
   </div>
 
 </template>
@@ -16,9 +28,13 @@
 <script>
 export default {
   name: 'app',
-  // data(){
-
-  // },
+  data(){
+return {
+  checkList:[],
+  a:'',
+  selfModel:'',
+}
+  },
 
   created(){
     // this.$alert(2);
@@ -34,24 +50,22 @@ export default {
       }
     },
     computed:{
-      a: {
+      testcheckbox: {
         get() {
-
-          return 1;
+// debugger;
+          // return this.value;
+          // return this.selfModel;
         },
         set(value) {
-          console.log('set');
+          debugger;
+          // console.log('set');
+          // this.value = value;
+          // this.$emit('input', value);
+          // this.selfModel = value;
 
         }
-      },
-      value:{
-        get(){
-          return this.value;
-        },
-        set(val){
-          this.$emit('input', val);
-        }
       }
+
     },
 }
 </script>
