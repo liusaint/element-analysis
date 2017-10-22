@@ -62,6 +62,7 @@
           // 如果是group中，拿store。
           // 如果单独，拿value或selfModel。
           debugger;
+          console.log(this.isGroup,this.store,this.value,this.selfModel);
           return this.isGroup
             ? this.store : this.value !== undefined
             ? this.value : this.selfModel;
