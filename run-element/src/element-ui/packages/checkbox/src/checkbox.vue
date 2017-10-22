@@ -62,9 +62,10 @@
           // 如果是group中，拿store。
           // 如果单独，拿value或selfModel。
           debugger;
-          // return this.isGroup
-          //   ? this.store : this.value !== undefined
-          //   ? this.value : this.selfModel;
+          return this.isGroup
+            ? this.store : this.value !== undefined
+            ? this.value : this.selfModel;
+          // return this.selfModel;
         },
 
         set(val) {
@@ -84,7 +85,7 @@
             this.dispatch('ElCheckboxGroup', 'input', [val]);
           } else {
             this.$emit('input', val);
-            // this.selfModel = val;
+            this.selfModel = val;
           }
         }
       },

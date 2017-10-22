@@ -20,7 +20,7 @@
 
     <label><input type="checkbox" value="1" v-model="testcheckbox">11111111</label>
     <label><input type="checkbox" value="2" v-model="testcheckbox">1111</label>
-    <label><input type="checkbox" value="3" v-model="testcheckbox">1111111111</label>
+    <label><input type="checkbox" value="3444" v-model="testcheckbox">1111111111</label>
   </div>
 
 </template>
@@ -55,6 +55,7 @@ return {
 // debugger;
           // return this.value;
           // return this.selfModel;
+          return [1,2]
         },
         set(value) {
           debugger;
