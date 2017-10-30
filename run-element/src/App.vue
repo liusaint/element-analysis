@@ -21,6 +21,9 @@
     <label><input type="checkbox" value="1" v-model="testcheckbox">11111111</label>
     <label><input type="checkbox" value="2" v-model="testcheckbox">1111</label>
     <label><input type="checkbox" value="3444" v-model="testcheckbox">1111111111</label>
+
+    <input type="text" v-model="theInputValue">
+    <input type="text" :value="theInputValue" @input="handleInput">
   </div>
 
 </template>
@@ -29,11 +32,13 @@
 export default {
   name: 'app',
   data(){
-return {
-  checkList:[],
-  a:'',
-  selfModel:'',
-}
+    return {
+      checkList:[],
+      a:'',
+      selfModel:'',
+      theInputValue:1,
+      preValue:1,
+    }
   },
 
   created(){
@@ -42,11 +47,17 @@ return {
   methods:{
     clickbtn(){
       alert(1);
+    },
+    handleInput(event){
+      this.theInputValue = event.target.value;
     }
   },
   watch: {
     a(value) {
         console.log(value);
+      },
+      theInputValue(val){
+        console.log(val);
       }
     },
     computed:{

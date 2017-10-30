@@ -124,7 +124,9 @@
 
     watch: {
       'value'(val, oldValue) {
-        this.setCurrentValue(val);
+        console.log(this);
+        // 这一句似乎去掉也没什么影响。
+        // this.setCurrentValue(val);
       }
     },
 
@@ -164,6 +166,7 @@
       },
       setCurrentValue(value) {
         if (value === this.currentValue) return;
+        console.log(1);
         this.$nextTick(_ => {
           this.resizeTextarea();
         });
@@ -176,6 +179,7 @@
 
     created() {
       this.$on('inputSelect', this.inputSelect);
+      debugger;
     },
 
     mounted() {
