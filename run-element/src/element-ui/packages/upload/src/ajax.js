@@ -16,6 +16,7 @@ function getError(action, option, xhr) {
 }
 
 function getBody(xhr) {
+  debugger;
   const text = xhr.responseText || xhr.response;
   if (!text) {
     return text;
