@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <router-view/>
-    <ElAlert title="这是一个alert" show-icon description="this is description">1</ElAlert>
+<!--     <ElAlert title="这是一个alert" show-icon description="this is description">1</ElAlert>
     <el-button type="primary" icon="edit" :disabled="true" @click="clickbtn">按钮</el-button>
 
     <label>
       <input type="radio" name="" id="" value="1" v-model="a">测试label</label>
     <label>
-      <input type="radio" name="" id="" value="2" v-model="a">2222222222</label>
+      <input type="radio" name="" id="" value="2" v-model="a">2222222222</label> -->
 
     <!-- <el-checkbox-group v-model="checkList"> -->
       <!-- <el-checkbox v-model="a" label="aaa" true-label="trueA" false-label="falseA"></el-checkbox> -->
@@ -18,17 +18,19 @@
     <!-- </el-checkbox-group> -->
 
 
-    <label><input type="checkbox" value="1" v-model="testcheckbox">11111111</label>
+<!--     <label><input type="checkbox" value="1" v-model="testcheckbox">11111111</label>
     <label><input type="checkbox" value="2" v-model="testcheckbox">1111</label>
     <label><input type="checkbox" value="3444" v-model="testcheckbox">1111111111</label>
 
     <input type="text" v-model="theInputValue">
-    <input type="text" :value="theInputValue" @input="handleInput">
+    <input type="text" :value="theInputValue" @input="handleInput"> -->
+    <model></model>
   </div>
 
 </template>
 
 <script>
+import model from './components/model.vue'
 export default {
   name: 'app',
   data(){
@@ -40,6 +42,8 @@ export default {
       preValue:1,
     }
   },
+  components:[model],
+
 
   created(){
     // this.$alert(2);
