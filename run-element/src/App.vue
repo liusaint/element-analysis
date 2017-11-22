@@ -24,13 +24,13 @@
 
     <input type="text" v-model="theInputValue">
     <input type="text" :value="theInputValue" @input="handleInput"> -->
-    <model></model>
+    <test-model v-model="value"></test-model>
   </div>
 
 </template>
 
 <script>
-import model from './components/model.vue'
+import testModel from './components/model.vue'
 export default {
   name: 'app',
   data(){
@@ -40,9 +40,10 @@ export default {
       selfModel:'',
       theInputValue:1,
       preValue:1,
+      value:true
     }
   },
-  components:[model],
+  components:{testModel},
 
 
   created(){
