@@ -134,7 +134,7 @@ export default {
         console.error(err);
         return;
       }
-debugger;
+      // debugger;
       this.uploadFiles.push(file);
       this.onChange(file, this.uploadFiles);
     },

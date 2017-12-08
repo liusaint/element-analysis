@@ -179,7 +179,7 @@
 
     created() {
       this.$on('inputSelect', this.inputSelect);
-      debugger;
+      // debugger;
     },
 
     mounted() {

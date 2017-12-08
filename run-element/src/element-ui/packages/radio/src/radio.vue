@@ -64,12 +64,12 @@
 
       model: {
         get() {
-          debugger;
+          // debugger;
           return this.isGroup ? this._radioGroup.value : this.value;
         },
 
         set(val) {
-          debugger;
+          // debugger;
           if (this.isGroup) {
             this.dispatch('ElRadioGroup', 'input', [val]);
             // 是不是下面这种写法也可以

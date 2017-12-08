@@ -3,7 +3,7 @@
 </template>
 
 <script>
-// 一个简单的自已定义表单组件.
+// 一个简单的自定义表单组件.
 export default {
   name: 'testModel',
   props: {
