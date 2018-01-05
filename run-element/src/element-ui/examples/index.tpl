@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1473762766_7074292.css">
     <link rel='mask-icon' href="https://raw.githubusercontent.com/ElemeFE/element/dev/examples/assets/images/element-logo-small.svg" color="#20a0ff">
     <title>Element</title>
+    <!--[if lt IE 10]>
+ <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+ <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
   </head>
   <body>
     <div id="app"></div><% if (process.env.NODE_ENV === 'production') { %>
